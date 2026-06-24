@@ -223,7 +223,7 @@ export default function BookingPage() {
                   <div className="space-y-4">
                     <span className="text-ui text-accent">Step 01</span>
                     <h2 className="text-3xl font-serif">Plan Your Journey</h2>
-                    <p className="text-muted-foreground text-editorial">Select the timeframe for your stay at Skylight Hotel.</p>
+                    <p className="text-muted-foreground text-editorial">Select the timeframe for your stay at Swiss Inn Nexus Hotel.</p>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

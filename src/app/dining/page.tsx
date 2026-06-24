@@ -55,7 +55,7 @@ export default function DiningPage() {
           >
             <Image 
               src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2000" 
-              alt="Dining at Skylight"
+              alt="Dining at Swiss Inn Nexus"
               fill
               priority
               className="object-cover"
@@ -88,7 +88,7 @@ export default function DiningPage() {
             <span className="text-[10px] uppercase tracking-[0.5em] text-accent font-bold">The Philosophy</span>
             <h2 className="text-4xl md:text-6xl font-serif leading-tight">Flavor as a Narrative</h2>
             <p className="text-editorial text-muted-foreground">
-              Dining at Skylight Hotel Addis Ababa is a celebration of flavor and culture. Our chefs are storytellers, using premium local ingredients—like organic highlands honey and single-origin coffee—combined with modern techniques to curate moments of sensory transcendence.
+              Dining at Swiss Inn Nexus Hotel is a celebration of flavor and culture. Our chefs are storytellers, using premium local ingredients—like organic highlands honey and single-origin coffee—combined with modern techniques to curate moments of sensory transcendence.
             </p>
           </div>
         </section>

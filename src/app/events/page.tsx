@@ -53,7 +53,7 @@ export default function EventsPage() {
       <section className="py-24 px-6 text-center max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-serif mb-8">Every Occasion, Elevated</h2>
         <p className="text-muted-foreground leading-relaxed text-lg font-light">
-          From secured diplomatic summits for global heads of state to grand banquets and high-profile corporate exhibitions, Skylight Hotel Addis Ababa provides East Africa's premier hosting infrastructure.
+          From secured diplomatic summits for global heads of state to grand banquets and high-profile corporate exhibitions, Swiss Inn Nexus Hotel provides East Africa's premier hosting infrastructure.
         </p>
       </section>
 

@@ -13,14 +13,14 @@ const categories = ["All", "Architecture", "Culinary", "Sanctuaries", "Events & 
 const assets = [
   { id: 1, src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200", cat: "Sanctuaries", title: "Executive Suite Suite", resolution: "8K UHD", orientation: "Landscape" },
   { id: 2, src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800", cat: "Architecture", title: "Main Lobby Geometry", resolution: "4K", orientation: "Portrait" },
-  { id: 3, src: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?q=80&w=800", cat: "Architecture", title: "Skylight Entrance Grand View", resolution: "8K", orientation: "Portrait" },
+  { id: 3, src: "https://images.unsplash.com/photo-1439066615861-d1af74d74000?q=80&w=800", cat: "Architecture", title: "Nexus Entrance Grand View", resolution: "8K", orientation: "Portrait" },
   { id: 4, src: "https://images.unsplash.com/photo-1550966841-3ee5ad60d0d9?q=80&w=800", cat: "Culinary", title: "Ta'em Heritage Dining Room", resolution: "4K", orientation: "Landscape" },
   { id: 5, src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200", cat: "Culinary", title: "Chef's Signature Ethiopian Plating", resolution: "8K UHD", orientation: "Landscape", span: "col-span-2 row-span-2" },
   { id: 6, src: "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=800", cat: "Culinary", title: "Coffee Ceremony Lounge", resolution: "4K", orientation: "Portrait" },
-  { id: 7, src: "https://images.unsplash.com/photo-1544161515-4ae6ce6ea8a8?q=80&w=800", cat: "Sanctuaries", title: "Skylight Wellness Entry", resolution: "8K", orientation: "Portrait" },
+  { id: 7, src: "https://images.unsplash.com/photo-1544161515-4ae6ce6ea8a8?q=80&w=800", cat: "Sanctuaries", title: "Nexus Wellness Entry", resolution: "8K", orientation: "Portrait" },
   { id: 8, src: "https://images.unsplash.com/photo-1519415510236-85592ac59c63?q=80&w=1200", cat: "Sanctuaries", title: "Ethio-Coffee Scrub Ritual", resolution: "8K UHD", orientation: "Landscape", span: "col-span-2" },
   { id: 9, src: "https://images.unsplash.com/photo-1540555700478-4be289fbecee?q=80&w=800", cat: "Sanctuaries", title: "Executive Business Workstation", resolution: "4K", orientation: "Portrait" },
-  { id: 10, src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800", cat: "Events & Meetings", title: "Skylight Grand Ballroom", resolution: "4K", orientation: "Landscape" },
+  { id: 10, src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800", cat: "Events & Meetings", title: "Nexus Grand Conference", resolution: "4K", orientation: "Landscape" },
   { id: 11, src: "https://images.unsplash.com/photo-1559827291-72ee739d0d9a?q=80&w=1200", cat: "Events & Meetings", title: "Diplomatic Boardroom Setup", resolution: "8K UHD", orientation: "Landscape", span: "col-span-2" },
 ];
 
@@ -41,7 +41,7 @@ export default function GalleryPage() {
             <div className="max-w-3xl space-y-6">
               <span className="text-[10px] uppercase tracking-[0.6em] text-accent font-bold block">Media Archive</span>
               <h1 className="text-display">Visual <br /> <span className="italic font-light">Asset Library</span></h1>
-              <p className="text-editorial text-muted-foreground">A curated collection of high-fidelity brand assets documenting the evolution and essence of Skylight Hotel Addis Ababa.</p>
+              <p className="text-editorial text-muted-foreground">A curated collection of high-fidelity brand assets documenting the evolution and essence of Swiss Inn Nexus Hotel.</p>
             </div>
             {/* Asset Categories */}
             <div className="flex flex-wrap gap-4 border-b border-border pb-4 w-full md:w-auto">

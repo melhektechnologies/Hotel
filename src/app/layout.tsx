@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import LoadingScreen from "@/components/layout/LoadingScreen";
 import ClientSideUI from "@/components/layout/ClientSideUI";
+import AIConcierge from "@/components/AIConcierge";
 import { AppProvider } from "@/context/AppContext";
 import "./globals.css";
 
@@ -26,13 +27,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://addisskylighthotel.com'),
+  metadataBase: new URL('https://nexusaddis.net'),
   title: {
-    default: "Skylight Hotel Addis Ababa | Luxury Hotel in Bole District",
-    template: "%s | Skylight Hotel Addis Ababa",
+    default: "Swiss Inn Nexus Hotel | Future Digital Experience Concept",
+    template: "%s | Swiss Inn Nexus Hotel",
   },
-  description: "East Africa's premier diplomatic retreat and luxury hotel, Skylight Hotel Addis Ababa. Located in Bole District, 5 minutes from Bole International Airport — the gateway to Ethiopia.",
-  keywords: ["skylight hotel addis ababa", "luxury hotel addis ababa", "bole district hotel", "diplomatic lodging ethiopia", "meetings events addis ababa"],
+  description: "Swiss Inn Nexus Hotel Addis Ababa. A modern 4-star experience featuring 151 suites, diverse culinary options, and premier conference facilities in Bole.",
+  keywords: ["swiss inn nexus hotel", "nexus hotel addis ababa", "luxury hotel addis ababa", "bole district hotel", "meetings events addis ababa"],
   authors: [{ name: "Melhek Technologies" }],
   creator: "Melhek Technologies",
   publisher: "Melhek Technologies",
@@ -43,23 +44,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://addisskylighthotel.com",
-    siteName: "Skylight Hotel Addis Ababa",
-    title: "Skylight Hotel Addis Ababa | Luxury Hotel & Diplomatic Retreat",
-    description: "East Africa's premier diplomatic retreat. Architectural mastery, high-security configurations, and authentic Ethiopian hospitality in the heart of Addis Ababa.",
+    url: "https://nexusaddis.net",
+    siteName: "Swiss Inn Nexus Hotel",
+    title: "Swiss Inn Nexus Hotel | Future Digital Experience Concept",
+    description: "Swiss Inn Nexus Hotel Addis Ababa. A modern 4-star experience featuring 151 suites, diverse culinary options, and premier conference facilities.",
     images: [
       {
         url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200",
         width: 1200,
         height: 630,
-        alt: "Skylight Hotel Lobby Entrance",
+        alt: "Swiss Inn Nexus Hotel",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Skylight Hotel Addis Ababa | Luxury Hotel & Diplomatic Retreat",
-    description: "East Africa's premier diplomatic retreat. Architectural mastery, high-security configurations, and authentic Ethiopian hospitality in the heart of Addis Ababa.",
+    title: "Swiss Inn Nexus Hotel | Future Digital Experience Concept",
+    description: "Swiss Inn Nexus Hotel Addis Ababa. A modern 4-star experience featuring 151 suites, diverse culinary options, and premier conference facilities.",
     images: ["https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200"],
   },
 };
@@ -78,6 +79,7 @@ export default function RootLayout({
             {children}
             <ClientSideUI />
           </SmoothScroll>
+          <AIConcierge />
         </AppProvider>
       </body>
     </html>

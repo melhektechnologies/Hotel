@@ -92,7 +92,7 @@ export default function Home() {
               <div className="relative aspect-[4/5] md:aspect-video lg:aspect-[16/10] overflow-hidden rounded-medium group shadow-medium">
                 <Image 
                   src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2000&auto=format&fit=crop" 
-                  alt="Skylight Hotel Addis Ababa Facade" 
+                  alt="Swiss Inn Nexus Hotel Facade" 
                   fill 
                   className="object-cover group-hover:scale-105 transition-transform duration-[3s] ease-out" 
                 />
@@ -151,7 +151,7 @@ export default function Home() {
               <div className="relative aspect-video rounded-medium overflow-hidden group shadow-medium">
                 <Image 
                   src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1600&auto=format&fit=crop" 
-                  alt="Skylight Grand Ballroom Conference" 
+                  alt="Swiss Inn Nexus Conference Room" 
                   fill 
                   className="object-cover group-hover:scale-105 transition-transform duration-[3s]" 
                 />
@@ -160,9 +160,9 @@ export default function Home() {
             
             <div className="lg:col-span-5 space-y-8">
               <span className="text-[10px] uppercase tracking-[0.5em] text-accent font-bold">Summits & Banquets</span>
-              <h2 className="text-4xl md:text-5xl font-serif leading-none">East Africa&apos;s Largest Ballroom</h2>
+              <h2 className="text-4xl md:text-5xl font-serif leading-none">Premier Conference Facilities</h2>
               <p className="text-editorial text-muted-foreground">
-                Spanning over 2,200 square meters, the Skylight Grand Ballroom holds up to 2,000 delegates. Equipped with biometric security access, encrypted briefing suites, and multiple translation booths, it is uniquely qualified for international summits and embassy functions.
+                Our state-of-the-art conference rooms are equipped with modern technology and high-speed Wi-Fi, perfect for business meetings, corporate events, and intimate gatherings in the heart of Bole.
               </p>
               <div className="pt-4">
                 <Link href="/events" className="btn-luxury-primary py-4 px-10 rounded-small">

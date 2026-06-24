@@ -53,9 +53,9 @@ export default function ContactPage() {
             <div className="lg:col-span-4 space-y-16">
               <div className="space-y-12">
                 {[
-                  { title: "Location", details: ["Bole Airport Area, Airport Road", "Addis Ababa, Ethiopia"], icon: <MapPin size={20} /> },
-                  { title: "Direct Line", details: ["+251 11 617 2000", "+251 11 617 2001"], icon: <Phone size={20} /> },
-                  { title: "Correspondence", details: ["reservations@addisskylighthotel.com", "concierge@addisskylighthotel.com"], icon: <Mail size={20} /> },
+                  { title: "Location", details: ["Gerji Mebrathaile Street, Bole", "Addis Ababa, Ethiopia"], icon: <MapPin size={20} /> },
+                  { title: "Direct Line", details: ["+251 11 646 6868", "+251 11 646 6869"], icon: <Phone size={20} /> },
+                  { title: "Correspondence", details: ["reservations@nexusaddis.net", "concierge@nexusaddis.net"], icon: <Mail size={20} /> },
                   { title: "Instant Access", details: ["Direct Protocol Desk", "Available 24/7"], icon: <MessageCircle size={20} /> }
                 ].map((item, i) => (
                   <div key={i} className="flex gap-8 group cursor-default">

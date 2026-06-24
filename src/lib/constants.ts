@@ -1,17 +1,17 @@
 export const HOTEL_BRAND = {
-  name: "Skylight Hotel Addis Ababa",
-  tagline: "The Junction of Elegance and Ethiopian Heritage",
-  location: "Bole District, Addis Ababa, Ethiopia",
-  philosophy: "Positioned at the diplomatic crossroads of Africa, Skylight Hotel Addis Ababa bridges exceptional modern luxury with rich Ethiopian hospitality. Located just five minutes from Bole International Airport, we serve as the premier sanctuary for international diplomats, business executives, and cultural explorers alike.",
+  name: "Swiss Inn Nexus Hotel",
+  tagline: "Future Digital Experience Concept",
+  location: "Gerji Mebrathaile Street, Bole, Addis Ababa, Ethiopia",
+  philosophy: "Swiss Inn Nexus Hotel offers a seamless blend of Ethiopian hospitality and future-ready digital experiences. Located just minutes from Bole International Airport, our 4-star sanctuary provides 151 guest rooms, vibrant dining options, and premium conference facilities.",
   contact: {
-    phone: "+251 11 617 2000",
-    email: "reservations@addisskylighthotel.com",
-    address: "Bole Airport Area, Airport Road, Addis Ababa, Ethiopia",
+    phone: "+251 11 646 6868",
+    email: "reservations@nexusaddis.net",
+    address: "Gerji Mebrathaile Street, Bole, Addis Ababa, Ethiopia",
   },
   social: {
-    instagram: "https://instagram.com/addisskylighthotel",
-    facebook: "https://facebook.com/addisskylighthotel",
-    twitter: "https://twitter.com/addisskylight",
+    instagram: "https://instagram.com/swissinnnexus",
+    facebook: "https://facebook.com/swissinnnexus",
+    twitter: "https://twitter.com/swissinnnexus",
   }
 };
 

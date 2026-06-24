@@ -16,7 +16,7 @@ export default function RoomsPage() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <Image 
           src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=2080&auto=format&fit=crop" 
-          alt="Skylight Hotel Guest Rooms Facade"
+          alt="Swiss Inn Nexus Hotel Guest Rooms Facade"
           fill
           className="object-cover"
           priority
