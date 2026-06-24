@@ -1,0 +1,120 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// -----------------------------------------
+// CORE DOMAIN: GUESTS & MEMBERSHIPS
+// -----------------------------------------
+
+model Guest {
+  id              String         @id @default(cuid())
+  email           String         @unique
+  firstName       String
+  lastName        String
+  phone           String?
+  tier            MembershipTier @default(CLASSIC)
+  reservations    Reservation[]
+  preferences     Preference?
+  loyaltyPoints   Int            @default(0)
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+}
+
+enum MembershipTier {
+  CLASSIC
+  SILVER
+  GOLD
+  THE_CIRCLE
+}
+
+model Preference {
+  id              String   @id @default(cuid())
+  guestId         String   @unique
+  guest           Guest    @relation(fields: [guestId], references: [id])
+  dietaryNotes    String?
+  pillowType      String?
+  roomTemperature Float?   @default(22.0)
+  transferMode    String?  // SEAPLANE, YACHT
+}
+
+// -----------------------------------------
+// INVENTORY: ROOMS & RESIDENCES
+// -----------------------------------------
+
+model Room {
+  id              String        @id @default(cuid())
+  slug            String        @unique
+  name            String
+  category        RoomCategory
+  basePrice       Decimal
+  capacity        Int
+  reservations    Reservation[]
+  status          RoomStatus    @default(AVAILABLE)
+}
+
+enum RoomCategory {
+  VILLA
+  SUITE
+  PENTHOUSE
+  PRIVATE_ISLAND
+}
+
+enum RoomStatus {
+  AVAILABLE
+  MAINTENANCE
+  OCCUPIED
+}
+
+// -----------------------------------------
+// TRANSACTIONS: RESERVATIONS
+// -----------------------------------------
+
+model Reservation {
+  id              String        @id @default(cuid())
+  guestId         String
+  guest           Guest         @relation(fields: [guestId], references: [id])
+  roomId          String
+  room            Room          @relation(fields: [roomId], references: [id])
+  checkIn         DateTime
+  checkOut        DateTime
+  status          BookingStatus @default(PENDING)
+  totalPrice      Decimal
+  paymentId       String?       @unique
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CHECKED_IN
+  COMPLETED
+  CANCELLED
+}
+
+// -----------------------------------------
+// IMPACT LEDGER: REGENERATIVE DATA
+// -----------------------------------------
+
+model ImpactMetric {
+  id              String     @id @default(cuid())
+  type            MetricType
+  value           Float
+  unit            String
+  recordedAt      DateTime   @default(now())
+}
+
+enum MetricType {
+  SOLAR_GENERATION
+  CORAL_BIOMASS
+  WASTE_DIVERSION
+  WATER_PURIFICATION
+}

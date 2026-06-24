@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-playfair), serif;
+  --font-sans: var(--font-inter), sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Elite-Tech Palette - Monochrome with Precision Accents */
+  --color-background: #FDFCFB; /* Alabaster */
+  --color-foreground: #0A0A0A; /* Pure Onyx */
+  --color-muted: #F5F2F0;     /* Muted Ash */
+  --color-muted-foreground: #71717A;
+  --color-accent: #B4975A;    /* Muted Gold */
+  --color-accent-blue: #3B82F6; /* Tech Azure */
+  --color-border: #E8E2DE;
+  --color-card: #FFFFFF;
+
+  /* Enterprise SaaS Color System Extensions */
+  --color-primary: #0A0A0A;
+  --color-secondary: #71717A;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+  --color-neutral: #F5F2F0;
+
+  /* Spacing Scale (4, 8, 12, 16, 24, 32, 48, 64) */
+  --spacing-s4: 4px;
+  --spacing-s8: 8px;
+  --spacing-s12: 12px;
+  --spacing-s16: 16px;
+  --spacing-s24: 24px;
+  --spacing-s32: 32px;
+  --spacing-s48: 48px;
+  --spacing-s64: 64px;
+
+  /* Border Radius System */
+  --radius-small: 2px;
+  --radius-medium: 8px;
+  --radius-large: 24px;
+
+  /* Elevation System */
+  --shadow-subtle: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+  --shadow-high: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.08);
+  
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-xl: 1.5rem;
+  --radius-3xl: 4rem;
+
+  /* Cinematic Animation Curvatures */
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground selection:bg-accent selection:text-white;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight leading-[1.05];
+  }
+}
+
+@layer utilities {
+  /* Elite Glassmorphism */
+  .glass {
+    @apply bg-white/40 backdrop-blur-3xl border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/60 backdrop-blur-3xl border border-white/5;
+  }
+
+  /* Futuristic Typography Scale */
+  .text-display {
+    @apply text-5xl md:text-8xl lg:text-[8vw] font-serif tracking-tighter leading-[0.85] lg:leading-[0.8];
+  }
+
+  .text-editorial {
+    @apply text-[1.2rem] leading-[1.6] font-light tracking-wide text-muted-foreground;
+  }
+
+  .text-ui {
+    @apply text-[9px] md:text-[10px] uppercase tracking-[0.4em] font-bold;
+  }
+
+  /* Spacing Architecture */
+  .section-padding {
+    @apply py-32 md:py-48 lg:py-64 px-6 md:px-12 lg:px-24;
+  }
+
+  /* Animation Language */
+  .reveal-up {
+    @apply opacity-0 translate-y-12 transition-all duration-[1200ms] ease-cinematic;
+  }
+
+  .reveal-up.active {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Tactile Luxury Button System */
+  .btn-luxury-primary {
+    @apply relative overflow-hidden bg-foreground text-background px-12 py-5 text-[9px] md:text-[10px] uppercase tracking-[0.4em] font-bold rounded-sm shadow-subtle;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: all 400ms var(--ease-cinematic);
+  }
+
+  .btn-luxury-primary:hover {
+    @apply bg-accent text-white shadow-medium;
+    transform: translateY(-2px);
+  }
+
+  .btn-luxury-primary:active {
+    transform: translateY(0);
+    @apply shadow-subtle;
+  }
+
+  .btn-luxury-outline {
+    @apply relative overflow-hidden border border-foreground/10 px-12 py-5 text-[9px] md:text-[10px] uppercase tracking-[0.4em] font-bold rounded-sm;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: all 400ms var(--ease-cinematic);
+  }
+
+  .btn-luxury-outline:hover {
+    @apply border-accent text-accent bg-accent/5 shadow-subtle;
+    transform: translateY(-2px);
+  }
+
+  .btn-luxury-outline:active {
+    transform: translateY(0);
+  }
+
+  /* Tech Glow Effects */
+  .glow-blue {
+    box-shadow: 0 0 40px -10px rgba(59, 130, 246, 0.3);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 50px -15px rgba(180, 151, 90, 0.2);
+  }
+}
+
+/* Custom Interaction Utilities */
+.link-underline {
+  @apply relative inline-block after:absolute after:bottom-[-4px] after:left-0 after:h-[1px] after:w-0 after:bg-accent after:transition-all after:duration-700 hover:after:w-full;
+}
+
+/* Scrollbar Engineering */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-accent/20 hover:bg-accent/50 transition-colors rounded-none;
+}
+
+/* Horizontal Scroll Snap for Editorial Sections */
+.snap-x-mandatory {
+  scroll-snap-type: x mandatory;
+}
+.snap-start {
+  scroll-snap-align: start;
+}
