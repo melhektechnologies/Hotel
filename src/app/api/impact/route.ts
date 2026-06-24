@@ -31,13 +31,11 @@ export async function GET() {
     const metricCount = await prisma.impactMetric.count();
     if (metricCount === 0) {
       console.log("[Seeding] Populating default ESG ledger metrics...");
-      await prisma.impactMetric.createMany({
-        data: [
-          { type: 'SOLAR_GENERATION', value: 3.52, unit: 'MW' },
-          { type: 'CORAL_BIOMASS', value: 15.4, unit: '%' },
-          { type: 'WASTE_DIVERSION', value: 94.2, unit: '%' }
-        ]
-      });
+      await Promise.all([
+        prisma.impactMetric.create({ data: { type: 'SOLAR_GENERATION', value: 3.52, unit: 'MW' } }),
+        prisma.impactMetric.create({ data: { type: 'CORAL_BIOMASS', value: 15.4, unit: '%' } }),
+        prisma.impactMetric.create({ data: { type: 'WASTE_DIVERSION', value: 94.2, unit: '%' } })
+      ]);
     }
 
     // 2. Fetch latest values
