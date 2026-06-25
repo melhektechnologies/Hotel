@@ -52,6 +52,7 @@ export class PrismaClient {
   impactMetric = {
     count: async () => 0,
     createMany: async () => ({}),
+    create: async () => ({}),
     findFirst: async () => null,
   };
 
