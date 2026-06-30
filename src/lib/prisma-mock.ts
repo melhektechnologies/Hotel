@@ -18,9 +18,9 @@ export class PrismaClient {
   constructor(options?: any) {}
   
   room = {
-    count: async () => 0,
-    createMany: async () => ({}),
-    findUnique: async () => ({
+    count: async (args?: any): Promise<number> => 0,
+    createMany: async (args?: any): Promise<any> => ({}),
+    findUnique: async (args?: any): Promise<any> => ({
       id: "deluxe-king",
       slug: "deluxe-king",
       name: "Deluxe King Room",
@@ -29,31 +29,48 @@ export class PrismaClient {
   };
 
   reservation = {
-    findFirst: async () => null,
-    create: async (args: any) => ({
+    findFirst: async (args?: any): Promise<any> => null,
+    create: async (args?: any): Promise<any> => ({
       id: `ATH-${Math.random().toString(36).substr(2, 9).toUpperCase()}`,
-      ...args.data
+      checkIn: new Date(),
+      checkOut: new Date(),
+      totalPrice: new MockDecimal(195),
+      room: { name: "Deluxe King Room" },
+      guest: {
+        firstName: "Mock",
+        lastName: "Guest",
+        email: "mock@guest.com",
+        tier: "CLASSIC",
+        preferences: {
+          pillowType: "Feather",
+          roomTemperature: 22,
+          dietaryNotes: "",
+          transferMode: "NONE"
+        }
+      },
+      ...args?.data
     }),
-    findUnique: async () => null,
+    findUnique: async (args?: any): Promise<any> => null,
   };
 
   guest = {
-    findUnique: async () => null,
-    create: async (args: any) => ({
+    findUnique: async (args?: any): Promise<any> => null,
+    create: async (args?: any): Promise<any> => ({
       id: 'mock-guest-id',
-      ...args.data
+      ...args?.data
     }),
+    update: async (args?: any): Promise<any> => ({}),
   };
 
   preference = {
-    update: async () => ({}),
+    update: async (args?: any): Promise<any> => ({}),
   };
 
   impactMetric = {
-    count: async () => 0,
-    createMany: async () => ({}),
-    create: async () => ({}),
-    findFirst: async () => null,
+    count: async (args?: any): Promise<number> => 0,
+    createMany: async (args?: any): Promise<any> => ({}),
+    create: async (args?: any): Promise<any> => ({}),
+    findFirst: async (args?: any): Promise<any> => null,
   };
 
   $transaction = async (fn: any) => fn(this);
