@@ -17,6 +17,7 @@ export const HOTEL_BRAND = {
 
 export type RoomType = {
   id: string;
+  slug: string;
   name: string;
   category: "Room" | "Suite" | "Penthouse";
   description: string;
@@ -35,6 +36,7 @@ export type RoomType = {
 export const ROOMS: RoomType[] = [
   {
     id: "deluxe-king",
+    slug: "deluxe-king",
     name: "Deluxe King Room",
     category: "Room",
     description: "Designed for business travelers and short-stay visitors. Features a plush king bed, an ergonomic work desk, a rainfall shower, and floor-to-ceiling windows overlooking the Bole business district.",
@@ -54,6 +56,7 @@ export const ROOMS: RoomType[] = [
   },
   {
     id: "deluxe-twin",
+    slug: "deluxe-twin",
     name: "Deluxe Twin Room",
     category: "Room",
     description: "Sophisticated and functional accommodation featuring twin beds, a writing desk, and high-speed fiber internet. Ideal for conference attendees and corporate delegates visiting the nearby UNECA headquarters.",
@@ -73,6 +76,7 @@ export const ROOMS: RoomType[] = [
   },
   {
     id: "executive-business",
+    slug: "executive-business",
     name: "Executive Business Room",
     category: "Room",
     description: "Located on higher floors, this room provides executive privileges, including exclusive access to the Skylight Club Lounge, priority check-in, and complimentary airport shuttle services.",
@@ -92,6 +96,7 @@ export const ROOMS: RoomType[] = [
   },
   {
     id: "executive-suite",
+    slug: "executive-suite",
     name: "Executive Suite",
     category: "Suite",
     description: "A spacious residence featuring a separated living lounge, dining table, and double vanity bath. Perfect for diplomatic delegates and families seeking refined luxury in Addis Ababa.",
@@ -111,6 +116,7 @@ export const ROOMS: RoomType[] = [
   },
   {
     id: "diplomatic-suite",
+    slug: "diplomatic-suite",
     name: "Diplomatic Suite",
     category: "Suite",
     description: "Optimized for global diplomats and delegation leaders. Features bulletproof window glazing, a private meeting desk for confidential briefings, a separate service entrance, and 24/7 dedicated butler support.",
@@ -130,6 +136,7 @@ export const ROOMS: RoomType[] = [
   },
   {
     id: "presidential-suite",
+    slug: "presidential-suite",
     name: "Presidential Penthouse",
     category: "Penthouse",
     description: "The peak of luxury in East Africa. Comprises a bulletproof master bedroom, an expansive dining hall, a full private kitchen, a state-of-the-art boardroom, and a dedicated culinary and butler detail with VIP airport motorcade transfers.",

@@ -31,7 +31,6 @@ export async function GET() {
     const metricCount = await prisma.impactMetric.count();
     if (metricCount === 0) {
       console.log("[Seeding] Populating default ESG ledger metrics...");
-      // @ts-ignore: Bypassing strict type mismatch from Prisma mock aliasing
       await prisma.impactMetric.createMany({
         data: [
           { type: 'SOLAR_GENERATION', value: 3.52, unit: 'MW' },
